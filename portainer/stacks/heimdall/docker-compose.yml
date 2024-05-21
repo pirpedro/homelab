@@ -3,21 +3,18 @@ services:
     image: linuxserver/heimdall
     container_name: heimdall
     environment:
-      - PUID=1001
-      - PGID=1001
-      - TZ=Europe/Madrid
+      - PUID=0
+      - PGID=0
+      - TZ=America/Sao_Paulo
     volumes:
-      - config:/config
+      - /docker/stack_data/heimdall/config:/config
     ports:
       - 80:80
       - 443:443
     restart: unless-stopped
     networks:
       - shared_network
-
-volumes:
-    config:
-        driver: local
+      
 networks:
   shared_network:
     external: true
