@@ -1,7 +1,6 @@
 services:
   heimdall:
     image: linuxserver/heimdall
-    name: heimdall
     environment:
       - PUID=0
       - PGID=0
