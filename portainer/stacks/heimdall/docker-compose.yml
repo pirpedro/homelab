@@ -12,7 +12,12 @@ services:
       - 80:80
       - 443:443
     restart: unless-stopped
+    network:
+      - shared_network
 
 volumes:
     config:
         driver: local
+networks:
+  shared_network:
+    external: true
