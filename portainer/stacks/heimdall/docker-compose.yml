@@ -1,7 +1,7 @@
 services:
   heimdall:
     image: linuxserver/heimdall
-    container_name: heimdall
+    name: heimdall
     environment:
       - PUID=0
       - PGID=0
@@ -11,10 +11,11 @@ services:
     ports:
       - 80:80
       - 443:443
-    restart: unless-stopped
     networks:
       - shared_network
       
 networks:
   shared_network:
     external: true
+    driver_opts:
+      com.docker.network.driver.overlay: "true"
