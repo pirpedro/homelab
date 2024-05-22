@@ -1,4 +1,4 @@
-FROM FROM debian:12-slim
+FROM debian:12-slim
 
 ENV TZ=America/Sao_Paulo
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
