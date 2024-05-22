@@ -12,8 +12,8 @@ services:
     environment:
       - UID=0
       - GID=0
-      - ST_TELEGRAM_CHAT_IDS=${smtp_to_telegram_chat_id}
-      - ST_TELEGRAM_BOT_TOKEN=${smtp_to_telegram_bot_token}
+      - ST_TELEGRAM_CHAT_IDS=${SMTP_TO_TELEGRAM_CHAT_ID_CONTENT}
+      - ST_TELEGRAM_BOT_TOKEN=${SMTP_TO_TELEGRAM_BOT_TOKEN_CONTENT}
       - TZ=America/Sao_Paulo
     secrets:
       - smtp_to_telegram_chat_id
