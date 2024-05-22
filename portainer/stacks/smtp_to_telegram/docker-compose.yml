@@ -4,16 +4,14 @@ secrets:
   smtp_to_telegram_bot_token:
     external: true
 
-
 services:
   smtp_to_telegram:
-    container_name: smtp_to_telegram
-    image: smtp_to_telegram
+    image: smtp_to_telegram:arm64
     environment:
-      - UID=0
-      - GID=0
-      - ST_TELEGRAM_CHAT_IDS=${smtp_to_telegram_chat_id}
-      - ST_TELEGRAM_BOT_TOKEN=${smtp_to_telegram_bot_token}
+      - UID=1000
+      - GID=1000
+      - ST_TELEGRAM_CHAT_IDS_FILE=/run/secrets/smtp_to_telegram_chat_id
+      - ST_TELEGRAM_BOT_TOKEN_FILE=/run/secrets/smtp_to_telegram_bot_token
       - TZ=America/Sao_Paulo
     secrets:
       - smtp_to_telegram_chat_id
