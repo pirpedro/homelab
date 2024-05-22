@@ -10,8 +10,8 @@ services:
     container_name: smtp_to_telegram
     image: smtp_to_telegram
     environment:
-      - UID=1000
-      - GID=1000
+      - UID=0
+      - GID=0
       - ST_TELEGRAM_CHAT_IDS=${smtp_to_telegram_chat_id}
       - ST_TELEGRAM_BOT_TOKEN=${smtp_to_telegram_bot_token}
       - TZ=America/Sao_Paulo
