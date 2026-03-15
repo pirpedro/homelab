@@ -6,7 +6,7 @@ services:
     ports:
       - "7575:7575"
     env_file:
-      - /opt/stacks-runtime/homarr/.env
+      - /opt/stacks/homarr/.env
     volumes:
       - /opt/data/homarr/appdata:/appdata
       - /var/run/docker.sock:/var/run/docker.sock:ro
