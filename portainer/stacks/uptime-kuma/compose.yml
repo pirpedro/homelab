@@ -7,3 +7,5 @@ services:
       - "3001:3001"
     volumes:
       - /opt/data/uptime-kuma/data:/app/data
+    dns:
+      - 192.168.10.1
