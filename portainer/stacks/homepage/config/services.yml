@@ -1,0 +1,55 @@
+- Infra:
+    - Portainer:
+        icon: portainer.png
+        href: https://192.168.1.50:9443
+        description: Gerenciamento Docker
+        server: my-docker
+        container: portainer
+        showStats: true
+
+    - Dozzle:
+        icon: dozzle.png
+        href: http://192.168.1.50:8081
+        description: Logs dos containers
+        server: my-docker
+        container: dozzle
+        showStats: true
+
+    - Homepage:
+        icon: homepage.png
+        href: http://192.168.1.50:3002
+        description: Dashboard YAML
+        server: my-docker
+        container: homepage
+        showStats: true
+
+- Dashboards:
+    - Uptime Kuma:
+        icon: uptime-kuma.png
+        href: http://192.168.1.50:3001
+        description: Monitoramento
+        server: my-docker
+        container: uptime-kuma
+        showStats: true
+
+- Rede:
+    - pfSense:
+        icon: pfsense.png
+        href: https://192.168.1.1
+        description: Firewall e roteador
+
+    - Pi-hole:
+        icon: pi-hole.png
+        href: http://192.168.1.2/admin
+        description: DNS e bloqueio
+
+- Acesso:
+    - Proxmox:
+        icon: proxmox.png
+        href: https://192.168.1.10:8006
+        description: Virtualização
+
+    - Docker Host SSH:
+        icon: si-linux
+        href: ssh://192.168.1.50
+        description: Acesso SSH à VM
