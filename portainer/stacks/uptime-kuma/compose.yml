@@ -9,8 +9,6 @@ services:
       - /opt/data/uptime-kuma/data:/app/data
     networks:
       - homelab_shared
-    dns:
-      - 192.168.10.1
 networks:
   homelab_shared:
     external: true
