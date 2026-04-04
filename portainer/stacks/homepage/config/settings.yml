@@ -1,0 +1,21 @@
+title: Homelab
+description: Dashboard principal do homelab
+theme: dark
+color: slate
+headerStyle: clean
+useEqualHeights: true
+fullWidth: true
+
+layout:
+  Infra:
+    style: row
+    columns: 3
+  Dashboards:
+    style: row
+    columns: 3
+  Rede:
+    style: row
+    columns: 3
+  Acesso:
+    style: row
+    columns: 3
