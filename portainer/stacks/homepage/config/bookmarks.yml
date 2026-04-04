@@ -1,0 +1,21 @@
+- Admin:
+    - GitHub:
+        - abbr: GH
+          href: https://github.com/
+
+    - Portainer:
+        - abbr: PT
+          href: https://192.168.1.50:9443
+
+    - Proxmox:
+        - abbr: PX
+          href: https://192.168.1.10:8006
+
+- Rede:
+    - pfSense:
+        - abbr: PF
+          href: https://192.168.1.1
+
+    - Pi-hole:
+        - abbr: PH
+          href: http://192.168.1.2/admin
