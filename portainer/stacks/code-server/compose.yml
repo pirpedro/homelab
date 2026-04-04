@@ -1,0 +1,19 @@
+services:
+  code-server:
+    image: lscr.io/linuxserver/code-server:latest
+    container_name: code-server
+    restart: unless-stopped
+    ports:
+      - "8443:8443"
+    environment:
+      PUID: "${PUID}"
+      PGID: "${PGID}"
+      TZ: "${TZ}"
+      HASHED_PASSWORD: "${HASHED_PASSWORD}"
+      DEFAULT_WORKSPACE: "/workspace"
+    volumes:
+      - /opt/data/code-server/config:/config
+      - /opt/stacks:/workspace/stacks
+      - /opt/config:/workspace/config
+      - /opt/data:/workspace/data
+      - /opt/backups:/workspace/backups
