@@ -9,6 +9,7 @@ services:
       HOMEPAGE_ALLOWED_HOSTS: "${HOMEPAGE_ALLOWED_HOSTS}"
     volumes:
       - /opt/config/homepage:/app/config
+      - /opt/data/homepage/images:/app/public/images
       - /var/run/docker.sock:/var/run/docker.sock:ro
     networks:
       - homelab_shared
