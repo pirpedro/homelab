@@ -10,3 +10,10 @@ services:
     volumes:
       - /opt/config/homepage:/app/config
       - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks:
+      - homelab-shared
+    dns:
+      - 192.168.10.1
+networks:
+  homelab_shared:
+    external: true
