@@ -9,7 +9,7 @@ services:
       PUID: "${PUID}"
       PGID: "${PGID}"
       TZ: "${TZ}"
-      HASHED_PASSWORD: "${HASHED_PASSWORD}"
+      PASSWORD: "focaTeste!"
       DEFAULT_WORKSPACE: "/workspace"
     volumes:
       - /opt/data/code-server/config:/config
