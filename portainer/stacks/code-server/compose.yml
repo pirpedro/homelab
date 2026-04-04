@@ -17,3 +17,8 @@ services:
       - /opt/config:/workspace/config
       - /opt/data:/workspace/data
       - /opt/backups:/workspace/backups
+    networks:
+      - homelab_shared
+networks:
+  homelab_shared:
+    external: true
