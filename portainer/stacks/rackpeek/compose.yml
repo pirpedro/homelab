@@ -1,0 +1,13 @@
+services:
+  rackpeek:
+    image: aptacode/rackpeek:latest
+    container_name: rackpeek
+    ports:
+      - "8080:8080"
+    volumes:
+      - /opt/config/rackpeek:/app/config
+    restart: unless-stopped
+    networks:
+      - homelab_shared
+
+
